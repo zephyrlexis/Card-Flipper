@@ -2,6 +2,6 @@
 
 # **Card Flipper: Card flipping memory game**
 
-#### Made for me to practice using HTML, CSS, and JavaScript, pretty simple to play :)
+#### Web game I made to practice using HTML, CSS, and JavaScript, pretty simple to play :)
 
 ### -> [Click Here to Play!](https://zephyrlexis.github.io/Card-Flipper/) <-
