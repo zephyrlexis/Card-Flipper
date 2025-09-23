@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Flipper</title>
+    <!-- css file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- header section -->
     <header class="header">
         <h1>
             Card Flipper
         </h1>
     </header>
 
+    <!-- card container/game board -->
     <div class="card-container">
         <div class="card">
             <div class="card-inner">
@@ -148,10 +151,24 @@
 
     </div>
 
-    <button id="play-again">
-        Play Again
-    </button>
+    <!-- win overlay -->
+    <div id="win-overlay">
+        <div class="win-box">
+            <h1>
+                You Win :D
+            </h1>
+            <h2>
+                Time: <span id="time-taken"></span>s
+            </h2>
+            <button id="play-again">
+                Play Again
+            </button>
+        </div>
+    </div>
 
+    <!-- confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <!-- javascript file -->
     <script src="script.js"></script>
 </body>
 </html>

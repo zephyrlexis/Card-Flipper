@@ -36,6 +36,7 @@ header h1 {
 
 .card-container {
     display: grid;
+    margin: 2rem auto;
     grid-template-columns: repeat(4, 150px);
     grid-template-rows: repeat(3, 180px);
     gap: 1rem;
@@ -107,10 +108,64 @@ header h1 {
   background-color: var(--main-yellow);
 }
 
+/* win overlay styles */
+
+#win-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.win-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-white);
+    padding: 1.5rem;
+    gap: 1.5rem;
+    border-radius: 40px;
+    border: 6px solid var(--main-black);
+    box-shadow: 0 4px 6px rgba(19, 29, 36, 0.3);
+    text-align: center;
+}
+
+.win-box h1 {
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'comic sans ms', cursive, sans-serif;
+    animation: colorShift 3s infinite;
+}
+
+@keyframes colorShift {
+    0%   { color: orangered; }
+    20%  { color: orange; }
+    40%  { color: limegreen; }
+    60%  { color: dodgerblue; }
+    80%  { color: mediumorchid; }
+    100% { color: orangered; }
+}
+
+.win-box h2 {
+    font-size: 1.5rem;
+    font-family: 'comic sans ms', cursive, sans-serif;
+    opacity: 0.8;
+}
+
 /* play again button styles */
 
 #play-again {
-    margin: 2rem auto;
+    margin: 0 auto;
     display: block;
     padding: 0.75rem 1.5rem;
     font-size: 1.5rem;
@@ -118,7 +173,7 @@ header h1 {
     font-family: 'comic sans ms', cursive, sans-serif;
     background-color: var(--main-black);
     color: var(--main-white);
-    border: 4px solid var(--main-black);
+    border: 6px solid var(--main-black);
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
@@ -126,6 +181,11 @@ header h1 {
 
 #play-again:hover {
     transform: scale(1.05);
-    background-color: var(--main-white);
+    background-color: var(--main-green);
     color: var(--main-black);
+}
+
+#win-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
