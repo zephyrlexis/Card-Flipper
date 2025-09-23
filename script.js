@@ -83,11 +83,10 @@ function checkForMatch() {
 
         if (matchedPairs === totalPairs) { //if all pairs are matched (WIN)
             lockBoard = true;
+            stopTimer(timer); //stops the timer
 
             setTimeout(() => {
                 document.getElementById('win-overlay').classList.add('visible'); //shows the win overlay
-
-                stopTimer(timer); //stops the timer
                 document.getElementById('time-taken').textContent = time; //displays the time taken
 
                 confetti({ //confetti effect
