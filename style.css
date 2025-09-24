@@ -87,6 +87,11 @@ header h1 {
     object-fit: contain;
     display: block;
     margin: auto;
+    
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .card-back {
